@@ -5,4 +5,6 @@ RUN apt-get update && apt-get install -y \
       tcpdump \
       tcpflow \
       sysstat \
-      strace
+      strace \
+      dstat \
+      conntrack
