@@ -37,14 +37,18 @@ docker run --rm -it --privileged --pid=host \
 
 If you want to check NAT table (conntrack) counted and ordered by source
 address
-```docker run --rm -it --net=host --cap-add=ALL \
+
+```
+docker run --rm -it --net=host --cap-add=ALL \
   giantswarm/sys-analysis-tools \
   conntrack -L |awk '{print $5}' |sort |uniq -c |sort -k 1
 ```
 
 If you want to check NAT table (conntrack) counted and ordered by source
 address
-```docker run --rm -it --net=host --cap-add=ALL \
+
+```
+docker run --rm -it --net=host --cap-add=ALL \
   giantswarm/sys-analysis-tools \
   conntrack -L |grep <IP_ADDRESS> |awk '{print $5" "$6" "$8" "$9" "$10"
 "$11}' |sort |uniq -c |sort
