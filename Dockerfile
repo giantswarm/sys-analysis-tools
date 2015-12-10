@@ -7,4 +7,5 @@ RUN apt-get update && apt-get install -y \
       sysstat \
       strace \
       dstat \
-      conntrack
+      conntrack \
+      iotop
