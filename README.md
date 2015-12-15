@@ -53,3 +53,9 @@ docker run --rm -it --net=host --cap-add=ALL \
   conntrack -L |grep <IP_ADDRESS> |awk '{print $5" "$6" "$8" "$9" "$10"
 "$11}' |sort |uniq -c |sort
 ```
+
+If you want to check top I/O bound processes information
+```docker run --rm -it --net=host --pid=host --cap-add=ALL --privileged \
+  giantswarm/sys-analysis-tools \
+  iotop
+```
