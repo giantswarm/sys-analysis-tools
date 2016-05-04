@@ -18,13 +18,20 @@ docker run --rm -it \
   htop
 ```
 
-Or for network analysis `tcpflow`:
+Or for network analysis `tcpflow` or `tcptrace`:
 
 ```
 docker run --rm -it \
   --net=host \
   giantswarm/sys-analysis-tools \
   tcpflow -C -i any port 80
+```
+
+```
+docker run --rm -it \
+  --net=host \
+  giantswarm/sys-analysis-tools \
+  tcptrace -l -o1 /tmp/tcpdump.out
 ```
 
 Tracing syscall with `strace` also works:
