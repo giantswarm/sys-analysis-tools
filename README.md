@@ -62,7 +62,9 @@ docker run --rm -it --net=host --cap-add=ALL \
 ```
 
 If you want to check top I/O bound processes information
-```docker run --rm -it --net=host --pid=host --cap-add=ALL --privileged \
+
+```
+docker run --rm -it --net=host --pid=host --cap-add=ALL --privileged \
   giantswarm/sys-analysis-tools \
   iotop
 ```
